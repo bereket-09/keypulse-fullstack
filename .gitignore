@@ -25,3 +25,5 @@ backend/.mvn/wrapper/maven-wrapper.jar
 
 # Deliverable zip
 KeyPulse-FullStack.zip
+.vercel
+.env*
