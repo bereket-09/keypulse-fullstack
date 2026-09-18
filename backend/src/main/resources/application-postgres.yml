@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/keypulsedb}
+    username: ${SPRING_DATASOURCE_USERNAME:keypulse}
+    password: ${SPRING_DATASOURCE_PASSWORD:keypulse_secret}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
