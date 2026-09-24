@@ -22,6 +22,12 @@ import java.util.Map;
 @Tag(name = "API Gateway (Sandbox)", description = "Gateway endpoints requiring x-api-key authentication")
 public class GatewayController {
 
+    @GetMapping("/health")
+    @Operation(summary = "Service health check")
+    public ResponseEntity<Map<String, Object>> health() {
+        return ResponseEntity.ok(Map.of("status", "UP", "service", "keypulse-backend"));
+    }
+
     @GetMapping("/mock-data")
     @Operation(
             summary = "Fetch mock service data via API key",
